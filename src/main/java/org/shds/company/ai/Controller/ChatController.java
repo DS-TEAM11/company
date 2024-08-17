@@ -1,4 +1,4 @@
-package org.shds.company.ai;
+package org.shds.company.ai.Controller;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.openai.OpenAiChatModel;
