@@ -31,6 +31,7 @@ public class CardHistory {
     private Integer orderState;
 
     private Integer price;
+    private String franchiseName;
     private String franchiseCode;
     private String cardNo;
 }

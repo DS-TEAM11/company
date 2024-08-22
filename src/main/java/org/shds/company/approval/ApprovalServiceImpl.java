@@ -35,6 +35,7 @@ public class ApprovalServiceImpl implements ApprovalService{
                 .cardNo(payDTO.getCardNo())
                 .requestName(payDTO.getRequestName())
                 .price(payDTO.getPrice())
+                .franchiseName(payDTO.getFranchiseName())
                 .franchiseCode(payDTO.getFranchiseCode())
                 .build();
         cardHistoryRepository.save(cardHistory);
