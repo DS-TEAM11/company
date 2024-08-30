@@ -1,6 +1,7 @@
 package org.shds.company.approval;
 
 import io.micrometer.core.instrument.config.validate.ValidationException;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.shds.company.DTO.PayDTO;
@@ -25,6 +26,7 @@ public class ApprovalServiceImpl implements ApprovalService{
     private final CardHistoryRepository cardHistoryRepository;
     private final CardOwnInfoRepository cardOwnInfoRepository;
 
+    @Transactional
     @Override
     public void saveCardHistory(PayDTO payDTO, int approval) {
 
@@ -42,6 +44,7 @@ public class ApprovalServiceImpl implements ApprovalService{
     }
 
     //카드 유효성 검사 로직
+    @Transactional
     @Override
     public int checkCardValidation(PayDTO payDTO) {
         //TODO:서버 오류 났을 경우 추가해야 함
